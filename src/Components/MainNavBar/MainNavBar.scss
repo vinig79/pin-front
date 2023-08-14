@@ -1,0 +1,30 @@
+.MainNavBarD{
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border-bottom: 0.2px solid gray;
+
+    .MainNavBarNB{
+        height: 100%;
+    }
+    .logo {
+        flex-grow: 1;
+        text-align: center;
+        a {
+            font-size: 24px;
+            text-decoration: none;
+        }
+    }
+    .nav-buttons {
+        display: flex;
+        gap: 10px;
+        a {
+            text-decoration: none;
+            padding: 6px 12px;
+            border-radius: 4px;
+        }
+    }
+    
+}
