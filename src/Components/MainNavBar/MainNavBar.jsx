@@ -14,7 +14,7 @@ export default function MainNavBar(){
                 <a href="#">Cursos</a>
             </div>
             <div class="logo">
-                <a href="#">Daw Pin</a>
+                <a href="#">ABC Down</a>
             </div>
             <div class="nav-buttons">
                 <a type="submit" onClick={redirecionarParaOutraRota}>Login </a>

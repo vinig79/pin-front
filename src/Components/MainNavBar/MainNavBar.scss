@@ -3,8 +3,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-
-    border-bottom: 0.2px solid gray;
+    background-color: #145faa;
+    border-bottom: 0.2px solid rgb(0, 0, 0);
 
     .MainNavBarNB{
         height: 100%;
@@ -13,6 +13,7 @@
         flex-grow: 1;
         text-align: center;
         a {
+            color: black;
             font-size: 24px;
             text-decoration: none;
         }
@@ -21,9 +22,13 @@
         display: flex;
         gap: 10px;
         a {
+            color: #fff;
             text-decoration: none;
             padding: 6px 12px;
             border-radius: 4px;
+        }
+        a:hover{
+            color: #f5a623;
         }
     }
     
