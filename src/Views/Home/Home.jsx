@@ -2,6 +2,14 @@ import MainNavBar from '../../Components/MainNavBar/MainNavBar.jsx'
 
 import styles from "./Home.scss";
 export default function Home(){
+    const cursos = [
+        "alfabetização 1",
+        "alfabetização 2",
+        "alfabetização 3",
+        "alfabetização 4",
+        "alfabetização 5",
+        "alfabetização 6",
+    ];
     return(
         <>
             <MainNavBar/>
@@ -12,34 +20,14 @@ export default function Home(){
             <div className='BodyHome'>
                 <main>
                     <section class="cursos">
-                    <h2>Nossos Cursos</h2>
-                    <div>
-                        <p>
-                            Alfabetização 1
-                        </p>
-                    </div>
-                    <div>
-                        <p>
-                            Alfabetização 2
-                        </p>
-                    </div>
-                    <div>
-                        <p>
-                            Alfabetização 3
-                        </p>
-                    </div>
-                    <div>
-                        <p>
-                            Alfabetização 4
-                        </p>
-                    </div>
-                    
-                    <ul>
-                        <li>Alfabetização 1</li>
-                        <li>Alfabetização 2</li>
-                        <li>Alfabetização 3</li>
-                        <li>Alfabetização 4</li>
-                    </ul>
+                        <h2>Nossos Cursos</h2>
+                        <div className='container_GridHome'>
+                            {cursos.map((curso, index) => (
+                            <div key={index} className="container_ItemGridHome">
+                                {curso}
+                            </div>
+                            ))}
+                        </div>
                     </section>
                 </main>
             </div>  
