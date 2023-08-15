@@ -22,7 +22,7 @@ export default function Home(){
                 </section>
             </main>
             <div>
-
+                
             </div>
             <footer>
                 <p>&copy; 2023 Cursos de Alfabetização</p>
