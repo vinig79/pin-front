@@ -6,10 +6,8 @@ import {
   Route,
 } from "react-router-dom";
 import reportWebVitals from './reportWebVitals';
-
 //Pages
 import Home from './Views/Home/Home.jsx';
-
 import Login from './Views/Login/Login.jsx';
 //styles
 import styles from './index.scss'

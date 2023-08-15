@@ -1,4 +1,3 @@
-
 import { useNavigate } from 'react-router-dom';
 
 import styles from './MainNavBar.scss';
@@ -18,8 +17,8 @@ export default function MainNavBar(){
                 <a href="#">Daw Pin</a>
             </div>
             <div class="nav-buttons">
-                <a type="submit" onClick={redirecionarParaOutraRota}>Login</a>
-                <a type="submit" onClick={redirecionarParaOutraRota}>Register</a>
+                <a type="submit" onClick={redirecionarParaOutraRota}>Login </a>
+                <a type="submit" onClick={redirecionarParaOutraRota}>Register </a>
             </div>
             </navbar>
         </>

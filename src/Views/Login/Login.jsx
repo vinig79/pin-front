@@ -1,3 +1,5 @@
+import LoginPanel from '../../Components/LoginPanel/LoginPanel.jsx';
+import RegisterPanel from '../../Components/RegisterPanel/RegisterPanel.jsx';
 
 import { useNavigate } from 'react-router-dom';
 
@@ -11,10 +13,7 @@ export default function Login(){
 
     return(
         <>
-            <button type="submit" onClick={redirecionarParaOutraRota} >Sair</button>
-            <p>
-                Parabens, você logou. Seu Bosta:D
-            </p>
+        <LoginPanel/> 
         </>
     )
 }
