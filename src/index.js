@@ -9,6 +9,7 @@ import reportWebVitals from './reportWebVitals';
 //Pages
 import Home from './Views/Home/Home.jsx';
 import Login from './Views/Login/Login.jsx';
+import Register from './Views/Register/Register.jsx'
 //styles
 import styles from './index.scss'
 const router = createBrowserRouter([
@@ -18,7 +19,10 @@ const router = createBrowserRouter([
   },{
     path: "Login",
     element: <Login/>,
-  },
+  },{
+    path:"Register",
+    element:<Register/>,
+  }
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(

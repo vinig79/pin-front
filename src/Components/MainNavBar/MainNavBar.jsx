@@ -3,10 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import styles from './MainNavBar.scss';
 export default function MainNavBar(){
     const navigate = useNavigate();
-
-    const redirecionarParaOutraRota = () => {
-        navigate("/Login")
-    };
+     
     return(
         <>
             <navbar className='MainNavBarD'>
@@ -17,8 +14,8 @@ export default function MainNavBar(){
                 <a href="#">ABC Down</a>
             </div>
             <div class="nav-buttons">
-                <a type="submit" onClick={redirecionarParaOutraRota}>Login </a>
-                <a type="submit" onClick={redirecionarParaOutraRota}>Register </a>
+                <a type="submit" onClick={ () =>{navigate('/Login')}}>Login </a>
+                <a type="submit" onClick={() =>{navigate('/Register')}}>Register </a>
             </div>
             </navbar>
         </>
