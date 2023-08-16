@@ -16,26 +16,52 @@
     h2 {
         margin-bottom: 10px;
     }
+
+    .login-input {
+        width: 90%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    .login-button {
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .login-button:hover {
+        background-color: #0056b3;
+    }
+
+    .registro{
+        display: flex;
+        flex-direction: column;
+        width: 40%;
+        p{
+            font-size: 12px;
+            text-align: left;
+        }
+    
+        .register-butto {
+            background-color: #fff;
+            color: #007bff;
+            text-align: left;
+            border: none;
+            border-radius: 5px;
+            padding: 0px;
+            cursor: pointer;
+        }
+    }
+    
 }
 
-.login-input {
-    width: 90%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
 
-.login-button {
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 20px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
 
-.login-button:hover {
-    background-color: #0056b3;
-}
+
+
