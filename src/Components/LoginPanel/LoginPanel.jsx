@@ -1,10 +1,10 @@
-import styles from "./LoginPanel.scss";
 import axios from "axios"
 import { useState} from "react";
+import { useNavigate } from "react-router-dom";
 
+import styles from "./LoginPanel.scss";
 export default function LoginPanel(){
-    
-    
+    const navigate = useNavigate()
 
     return(
         <>
@@ -17,7 +17,7 @@ export default function LoginPanel(){
                     <button type="submit" class="login-button">Entrar</button>
                     <div class="registro">
                         <p>Não possui Conta?</p>
-                        <button type="route" class="register-butto"> Registrar</button>
+                        <button type="route" class="register-butto" onClick={ () =>{navigate('/Register')}}> Registrar</button>
                     </div>
                     </form>
                 </div>

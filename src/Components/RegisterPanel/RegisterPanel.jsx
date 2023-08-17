@@ -15,7 +15,6 @@ export default function RegisterPanel() {
         axios.post("http://localhost:5000/register",data)
         navigate('/')
     }
-
     return(
         <>
         <div className="RegisterBody">
@@ -27,6 +26,10 @@ export default function RegisterPanel() {
                 <input type="password" class="register-input" placeholder="Senha" name="password1" onChange={handleInput}/>
                 <input type="password" class="register-input" placeholder="Confirmar Senha" name="password2" onChange={handleInput}/>
                 <button type="submit" class="register-button">Registrar</button>
+                <div class="Login">
+                        <p>Deseja logar?</p>
+                        <button type="route" class="Login-butto" onClick={ () =>{navigate('/Login')}}> Login</button>
+                    </div>
                 </form>
             </div>
         </div>

@@ -39,3 +39,23 @@
 .register-button:hover {
     background-color: #0056b3;
 }
+
+.Login{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    p{
+        font-size: 12px;
+        text-align: left;
+    }
+
+    .Login-butto {
+        background-color: #fff;
+        color: #007bff;
+        text-align: left;
+        border: none;
+        border-radius: 5px;
+        padding: 0px;
+        cursor: pointer;
+    }
+}
