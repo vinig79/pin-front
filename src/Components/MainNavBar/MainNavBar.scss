@@ -22,14 +22,15 @@
         display: flex;
         gap: 10px;
         a {
-            color: black;
+            color: rgb(255, 255, 255);
+            margin: 10px;
             text-decoration: none;
             padding: 6px 12px;
             border-radius: 4px;
+            background-color: rgb(79, 111, 255);
         }
         a:hover{
             color: #f5a623;
         }
     }
-    
 }

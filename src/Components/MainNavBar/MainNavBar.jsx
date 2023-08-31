@@ -8,14 +8,14 @@ export default function MainNavBar(){
         <>
             <navbar className='MainNavBarD'>
             <div class="nav-buttons">
-                <a href="#">Cursos</a>
+                <a href="#"> Cursos</a>
             </div>
             <div class="logo">
-                <a href="#">ABC Down</a>
+                <a href="#"></a>
             </div>
             <div class="nav-buttons">
-                <a type="submit" onClick={ () =>{navigate('/Login')}}>Login </a>
-                <a type="submit" onClick={() =>{navigate('/Register')}}>Register </a>
+                <a type="submit" onClick={ () =>{navigate('/Login')}}>Entrar </a>
+                <a type="submit" onClick={() =>{navigate('/Register')}}>Registrar </a>
             </div>
             </navbar>
         </>

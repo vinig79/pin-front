@@ -14,7 +14,7 @@ export default function Home(){
         <>
             <MainNavBar/>
             <header>
-                <h1>Cursos de Alfabetização</h1>
+                <img src="/Logo.png" alt=""/>
                 <p>Seja bem-vindo ao nosso site de cursos de alfabetização. Aqui você pode aprender a ler e escrever de forma fácil e divertida!</p>
             </header>
             <div className='BodyHome'>
@@ -32,7 +32,7 @@ export default function Home(){
                 </main>
             </div>  
             <footer>
-                <p>&copy; 2023 Cursos de Alfabetização</p>
+                <p>&copy; 2023 ABC Down</p>
             </footer>
         </>
     );
