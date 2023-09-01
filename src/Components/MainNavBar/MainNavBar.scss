@@ -10,14 +10,8 @@
         height: 100%;
     }
     .logo {
-        flex-grow: 1;
-        text-align: center;
-        a {
-            color: black;
-            font-size: 24px;
-            text-decoration: none;
-        }
-    }
+        object-fit: contain;
+    } 
     .nav-buttons {
         display: flex;
         gap: 10px;

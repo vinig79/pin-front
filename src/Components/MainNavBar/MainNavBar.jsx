@@ -1,4 +1,5 @@
 import { useNavigate } from 'react-router-dom';
+import Logo from "../../Assets/Logo.png"
 
 import styles from './MainNavBar.scss';
 export default function MainNavBar(){
@@ -11,7 +12,7 @@ export default function MainNavBar(){
                 <a href="#"> Cursos</a>
             </div>
             <div class="logo">
-                <a href="#"></a>
+                <img src={Logo} />
             </div>
             <div class="nav-buttons">
                 <a type="submit" onClick={ () =>{navigate('/Login')}}>Entrar </a>

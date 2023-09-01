@@ -14,7 +14,7 @@ export default function Home(){
         <>
             <MainNavBar/>
             <header> 
-                <img src="Imagens\Logo.png" />
+                
             </header>
             <div className='BodyHome'>
                 <main>
