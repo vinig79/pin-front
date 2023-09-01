@@ -1,0 +1,83 @@
+.container_SideBar{
+    display: flex;
+    height: 100%;
+    position: absolute;
+  }
+nav{
+    position: relative;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    left: 0;
+    background-color: white;
+    width: 80px;
+    transition: width 0.2s linear;
+    overflow: hidden;
+    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.8);
+    .fas{
+        position: relative;
+        width: 70px;
+        height: 50px;
+        top: 14px;
+        font-size: 30px;
+        text-align: center;
+    }
+}
+nav:hover{
+    width: 200px;
+    transition: all 0.5% ease;
+}
+  .logo{
+    text-align: center;
+    display: flex;
+    margin: 10px 0 0 10px;
+    transition: all 0.5% ease;
+    .LogoSide{
+        width: 45px;
+        margin: 10px;
+        height: 45px;
+        border-radius: 50%;
+    }
+    h1{
+        align-self: center;
+        font-weight: bold;
+        padding-left: 15px;
+        font-size: 18px;
+        text-transform: uppercase;
+    }
+}
+
+ul{
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    li{
+        a{
+            text-decoration: none;
+            position: relative;
+            color: rgb(0, 0, 0);
+            font-size: 14px;
+            display: table;
+            width: 300px;
+            padding: 10px;
+        }
+        
+    }
+
+}
+a:hover{
+    background: #ffffff;
+}
+
+.nav-item{
+    position: relative;
+    top: 12px;
+    margin-left: 10px;
+}
+.logout{
+    position: absolute;
+    bottom: 0;
+}
+.baixo{
+    margin-top: 330px;
+}

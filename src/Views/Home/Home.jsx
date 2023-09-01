@@ -1,5 +1,6 @@
 import MainNavBar from '../../Components/MainNavBar/MainNavBar.jsx'
-
+import MainSideBar from '../../Components/MainSideBar/MainSideBar.jsx'
+import Lapis from '../../Assets/lápis.png'
 import styles from "./Home.scss";
 export default function Home(){
     let itens = []
@@ -11,6 +12,7 @@ export default function Home(){
     return(
         <>
             <MainNavBar/>
+            <MainSideBar/>
             <header> 
                 
             </header>
@@ -24,8 +26,14 @@ export default function Home(){
                 </main>
             </div>  
             <footer>
-                <p>&copy; 2023 ABC Down</p>
+                
             </footer>
+            <div className='GridLapis'>
+                <img className="Lapis" src={Lapis} alt="" />
+                <img className="Lapis" src={Lapis} alt="" />
+                <img className="Lapis" src={Lapis} alt="" />
+                <img className="Lapis" src={Lapis} alt="" />
+            </div>
         </>
     );
 }

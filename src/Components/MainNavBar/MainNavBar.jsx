@@ -9,10 +9,10 @@ export default function MainNavBar(){
         <>
             <navbar className='MainNavBarD'>
             <div class="nav-buttons">
-                <a href="#"> Cursos</a>
+                
             </div>
             <div class="logo">
-                <img src={Logo} />
+                <img className="LogoMain" src={Logo} />
             </div>
             <div class="nav-buttons">
                 <a type="submit" onClick={ () =>{navigate('/Login')}}>Entrar </a>

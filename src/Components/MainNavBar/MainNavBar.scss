@@ -1,5 +1,5 @@
 .MainNavBarD{
-    height: 50px;
+    height: 70px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -10,15 +10,12 @@
         height: 100%;
     }
     .logo {
-        img {
-            padding-top: 15px;
+        .LogoMain {
             width: 80%;
-            padding-left: 75px;
+            padding-left: 130px;
         }
         object-fit: contain;
         width: 100px;
-        
-
     } 
     .nav-buttons {
         display: flex;
