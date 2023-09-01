@@ -3,24 +3,23 @@ import MainNavBar from '../../Components/MainNavBar/MainNavBar.jsx'
 import styles from "./Home.scss";
 export default function Home(){
     const cursos = [
-        "alfabetização 1",
-        "alfabetização 2",
-        "alfabetização 3",
-        "alfabetização 4",
-        "alfabetização 5",
-        "alfabetização 6",
+        "alfabetização 1 ✏️",
+        "Leitura 1 📕",
+        "alfabetização 2 ✏️",
+        "Leitura 2 📕" ,
+        "alfabetização 3 ✏️",
+        "Leitura 3 📕",
     ];
     return(
         <>
             <MainNavBar/>
-            <header>
-                <img src="/Logo.png" alt=""/>
-                <p>Seja bem-vindo ao nosso site de cursos de alfabetização. Aqui você pode aprender a ler e escrever de forma fácil e divertida!</p>
+            <header> 
+                <img src="Imagens\Logo.png" />
             </header>
             <div className='BodyHome'>
                 <main>
                     <section class="cursos">
-                        <h2>Nossos Cursos</h2>
+                        <h2>Fases </h2>
                         <div className='container_GridHome'>
                             {cursos.map((curso, index) => (
                             <div key={index} className="container_ItemGridHome">
