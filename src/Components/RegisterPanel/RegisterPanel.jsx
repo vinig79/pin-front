@@ -12,7 +12,9 @@ export default function RegisterPanel() {
     }
     const handleSubmit = (event) =>{
         event.preventDefault();
-        axios.post("http://localhost:5000/register",data)
+        axios.post("http://localhost:5000/register",data).catch(()=>{
+            console.log('erro')
+        })
         navigate('/')
     }
     return(

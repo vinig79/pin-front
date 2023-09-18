@@ -13,7 +13,9 @@ export default function LoginPanel(){
 
     const handleSubmit = (event) =>{
         event.preventDefault();
-        axios.post('http://localhost:5000/login',data)
+        axios.post('http://localhost:5000/login',data).catch(()=>{
+            console.log('erro')
+        })
         navigate('/')
     };
 
