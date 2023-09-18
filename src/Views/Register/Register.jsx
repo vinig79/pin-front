@@ -7,7 +7,7 @@ export default function Login(){
     const navigate = useNavigate();
 
     const redirecionarParaOutraRota = () => {
-        navigate("/")
+        navigate("")
     };
 
     return(
