@@ -11,22 +11,22 @@ export default function MainSideBar(){
                         <h1>Speefyr</h1>
                     </div>
                     <ul>
-                        <li><a href="#">
+                        <li><a className="ButtonSide" href="#">
                             <i class="fas fa-user"></i>
                             <span class="nav-item">Conta</span>
                         </a>
                         </li>
-                        <li><a href="#">
+                        <li><a className="ButtonSide" href="#">
                             <i class="fas fa-list"></i>
                             <span class="nav-item">Coleção</span>
                         </a>
                         </li>
-                        <li><a href="#">
+                        <li><a className="ButtonSide" href="#">
                             <i class="fas fa-info"></i>
                             <span class="nav-item">Informações</span>
                         </a>
                         </li>
-                        <li><a className="baixo" href="#">
+                        <li><a className="ButtonSide-baixo" href="#">
                             <i class="fas fa-address-card"></i>
                             <span class="nav-item">Sobre nós</span>
                         </a>

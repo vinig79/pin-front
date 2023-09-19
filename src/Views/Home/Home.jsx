@@ -13,15 +13,19 @@ export default function Home(){
         <>
             <MainNavBar/>
             <MainSideBar/>
-            <header> 
+            <header className='BarraHeaderHome'> 
                 
             </header>
             <div className='BodyHome'>
                 <main>
                     <section class="cursos">
-                        <div className='container_GridHome'>
-                            {itens}
+                    <div className="container_GridHome">
+                    {itens.map((itens, index) => (
+                        <div key={index} className="container_ItemGridHome">
+                        {itens}
                         </div>
+                    ))}
+                    </div>
                     </section>
                 </main>
             </div>  
@@ -30,9 +34,9 @@ export default function Home(){
             </footer>
             <div className='GridLapis'>
                 <img className="Lapis" src={Lapis} alt="" />
+                {/* <img className="Lapis" src={Lapis} alt="" />
                 <img className="Lapis" src={Lapis} alt="" />
-                <img className="Lapis" src={Lapis} alt="" />
-                <img className="Lapis" src={Lapis} alt="" />
+                <img className="Lapis" src={Lapis} alt="" /> */}
             </div>
         </>
     );

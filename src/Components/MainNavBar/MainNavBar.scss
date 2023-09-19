@@ -1,11 +1,12 @@
 .MainNavBarD{
-    height: 70px;
+    height: 10%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: white;
     border-bottom: 0.2px solid rgb(0, 0, 0);
-
+    top: 0;
+    position: sticky;
     .MainNavBarNB{
         height: 100%;
     }

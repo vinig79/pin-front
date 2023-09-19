@@ -1,16 +1,16 @@
 .container_SideBar{
     display: flex;
-    height: 100%;
-    position: absolute;
+    height: 90%;
+    position: fixed;
   }
 nav{
-    position: relative;
+    position: sticky;
     top: 0;
     bottom: 0;
     height: 100%;
     left: 0;
     background-color: white;
-    width: 80px;
+    width: 25%;
     transition: width 0.2s linear;
     overflow: hidden;
     box-shadow: 0 20px 35px rgba(0, 0, 0, 0.8);
@@ -65,19 +65,26 @@ ul{
     }
 
 }
-a:hover{
+.nav-item:hover{
     background: #ffffff;
 }
-
 .nav-item{
     position: relative;
     top: 12px;
     margin-left: 10px;
 }
-.logout{
+.ButtonSide-baixo{
     position: absolute;
-    bottom: 0;
+    bottom: 0;;
 }
-.baixo{
-    margin-top: 330px;
+
+@media (max-width: 768px) {
+    .nav {
+        width: 100%; /* Make the sidebar occupy the full width of the screen */
+        margin-bottom: 20px; /* Add some space between the sidebar and content */
+    }
+
+    .content {
+        margin-left: 0; /* Reset margin for the content */
+    }
 }
