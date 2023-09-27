@@ -10,6 +10,7 @@ import reportWebVitals from './reportWebVitals';
 import Home from './Views/Home/Home.jsx';
 import Login from './Views/Login/Login.jsx';
 import Register from './Views/Register/Register.jsx'
+import Videos from './Views/Videos/Videos.jsx'
 //styles
 import styles from './index.scss'
 const router = createBrowserRouter([
@@ -22,6 +23,9 @@ const router = createBrowserRouter([
   },{
     path:"Register",
     element:<Register/>,
+  },{
+    path: "Videos",
+    element:<Videos/>,
   }
 ]);
 

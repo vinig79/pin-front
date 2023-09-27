@@ -25,12 +25,12 @@ export default function LoginPanel(){
                 <div className="login-panel">
                     <h2>Login</h2>
                     <form onSubmit={handleSubmit}>
-                    <input type="email" class="login-input" placeholder="Email" name='email' onChange={handleInput}/>
-                    <input type="password" class="login-input" placeholder="Senha"  name='password'onChange={handleInput} />
-                    <button type="submit" class="login-button">Entrar</button>
-                    <div class="registro">
+                    <input type="email" className="login-input" placeholder="Email" name='email' onChange={handleInput} required/>
+                    <input type="password" className="login-input" placeholder="Senha"  name='password'onChange={handleInput} required/>
+                    <button type="submit" className="login-button">Entrar</button>
+                    <div className="registro">
                         <p>Não possui Conta?</p>
-                        <button type="route" class="register-butto" onClick={ () =>{navigate('/Register')}}> Registrar</button>
+                        <button type="route" className="register-butto" onClick={ () =>{navigate('/Register')}}> Registrar</button>
                     </div>
                     </form>
                 </div>

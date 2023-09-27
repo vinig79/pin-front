@@ -8,11 +8,12 @@ export default function Login(){
     const navigate = useNavigate();
 
     const redirecionarParaOutraRota = () => {
-        navigate("/")
+        navigate("")
     };
 
     return(
         <>
+        <a className='SetaEsquerda' href='/'> <i className="fas fa-arrow-left"></i> </a>
         <LoginPanel/> 
         </>
     )
