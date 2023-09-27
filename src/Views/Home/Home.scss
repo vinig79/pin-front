@@ -14,6 +14,8 @@ body, h1, h2, p, ul, li {
   .BarraHeaderHome {
     background-color: #1b497a; /* Amarelo */
     color: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
   
   h1 {
@@ -54,10 +56,6 @@ body, h1, h2, p, ul, li {
       }
     }
   }
-  
-  footer {
-
-  }
 
   .GridLapis{
     display: flex;
@@ -78,6 +76,13 @@ body, h1, h2, p, ul, li {
     .container_GridHome {
       grid-template-columns:repeat(2, 1fr)
     }
+  }
+  @media (max-width:600px)  { /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */ 
+    .logo{
+      .LogoMain{
+        display: none;
+      }
+    }    
   }
   @media (min-width:770px)  { /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */ 
     .container_GridHome{

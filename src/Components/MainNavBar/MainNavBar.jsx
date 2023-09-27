@@ -8,13 +8,13 @@ export default function MainNavBar(){
     return(
         <>
             <navbar className='MainNavBarD'>
-            <div class="nav-buttons">
+            <div className="nav-buttons">
                 
             </div>
-            <div class="logo">
+            <div className="logo">
                 <img className="LogoMain" src={Logo} />
             </div>
-            <div class="nav-buttons">
+            <div className="nav-buttons">
                 <a type="submit" onClick={ () =>{navigate('/Login')}}>Entrar </a>
                 <a type="submit" onClick={() =>{navigate('/Register')}}>Registrar </a>
             </div>

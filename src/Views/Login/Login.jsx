@@ -13,7 +13,7 @@ export default function Login(){
 
     return(
         <>
-        <a className='SetaEsquerda' href='/'> <i class="fas fa-arrow-left"></i> </a>
+        <a className='SetaEsquerda' href='/'> <i className="fas fa-arrow-left"></i> </a>
         <LoginPanel/> 
         </>
     )
