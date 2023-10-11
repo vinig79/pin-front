@@ -33,14 +33,11 @@ export default function Home() {
                         </section>
                     </main>
                 </div>
-                <footer>
-
-                </footer>
                 <div className='GridLapis'>
-                    <img className="Lapis" src={Lapis} alt="" />
+                    {/* <img className="Lapis" src={Lapis} alt="" />
                     {/* <img className="Lapis" src={Lapis} alt="" />
                             <img className="Lapis" src={Lapis} alt="" />
-                            <img className="Lapis" src={Lapis} alt="" /> */}
+                            <img className="Lapis" src={Lapis} alt="" /> */} */
                 </div>
             </div>
         </>
