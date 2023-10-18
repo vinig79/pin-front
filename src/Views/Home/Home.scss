@@ -46,7 +46,7 @@ h2 {
 }
 
 .container_GridHome {
-  margin-left: 60px;
+  margin-left: 16%;
   margin-right: 10px;
   margin-bottom: 5px;
   display: grid;
@@ -65,15 +65,19 @@ h2 {
   }
 }
 .BotaoAula {
+  height: 180px;
+  width: 180px;
 }
 .GridLapis {
   display: flex;
   flex-direction: row;
-  align-items: last baseline                              p;
+  align-items: last baseline p;
   row-gap: 0px;
   height: calc(20%);
   background-image: url(../../Assets/lápis.png);
   object-fit: contain;
+  margin-top: auto;
+  background-size: 100%;
   .Lapis {
     max-height: 20%;
     width: 100%;
@@ -88,8 +92,12 @@ h2 {
   .container_ItemGridHome{
     img{
       max-height: 200px;
-      width: 140px;
+      width: 120px;
     }
+  }
+  .BotaoAula {
+    height: 120px;
+    width: 120px;
   }
 }
 @media (min-width: 540px) {
@@ -102,6 +110,11 @@ h2 {
       max-height: 200px;
       width: 180px;
     }
+    
+  }
+  .BotaoAula {
+    height: 180px;
+    width: 180px;
   }
 }
 @media (max-width: 600px) {
@@ -118,15 +131,21 @@ h2 {
     grid-template-columns: repeat(3, 1fr);
   }
 }
-@media (min-width: 1025px) {
+@media (min-width: 1024px) {
   /* big landscape tablets, laptops, and desktops */
   .container_GridHome {
     grid-template-columns: repeat(3, 1fr);
+  }
+  .GridLapis{
+    background-size: 50%;
   }
 }
 @media (min-width: 1281px) {
   /* hi-res laptops and desktops */
   .container_GridHome {
     grid-template-columns: repeat(3, 1fr);
+  }
+  .GridLapis{
+    background-size: 50%;
   }
 }

@@ -10,7 +10,7 @@ import Home from './Views/Home/Home.jsx';
 import Login from './Views/Login/Login.jsx';
 import Register from './Views/Register/Register.jsx'
 import Videos from './Views/Videos/Videos.jsx'
-
+import styles from './index.scss'
 const router = createBrowserRouter([
   {
     path: "/",
@@ -26,6 +26,7 @@ const router = createBrowserRouter([
     element:<Videos/>,
   }
 ]);
+
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <RouterProvider router={router} />
