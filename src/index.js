@@ -10,6 +10,11 @@ import Home from './Views/Home/Home.jsx';
 import Login from './Views/Login/Login.jsx';
 import Register from './Views/Register/Register.jsx'
 import Videos from './Views/Videos/Videos.jsx'
+import Informacoes from './Views/Informacoes/Informacoes.jsx';
+import Conta from './Views/Conta/Conta.jsx'
+import Recompensas from './Views/Recompensas/Recompensas.jsx'
+import SobreNos from './Views/SobreNos/SobreNos.jsx';
+
 import styles from './index.scss'
 const router = createBrowserRouter([
   {
@@ -24,6 +29,18 @@ const router = createBrowserRouter([
   },{
     path: "Videos",
     element:<Videos/>,
+  },{
+    path: "Informacoes",
+    element:<Informacoes/>,
+  },{
+    path: "Conta",
+    element:<Conta/>,
+  },{
+    path: "Recompensas",
+    element:<Recompensas/>,
+  },{
+    path: "SobreNos",
+    element:<SobreNos/>,
   }
 ]);
 

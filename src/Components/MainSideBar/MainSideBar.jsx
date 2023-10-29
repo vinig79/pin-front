@@ -10,23 +10,23 @@ export default function MainSideBar(){
                         <img className="LogoSide" src={Logo} alt=""></img>
                         <h1>Speefyr</h1>
                     </div>
-                    <ul>
-                        <li><a className="ButtonSide" href="#">
+                    <ul className="UlMainSide">
+                        <li className="LiMainSide"><a className="ButtonSide" href="#">
                             <i className="fas fa-user"></i>
                             <span className="nav-item">Conta</span>
                         </a>
                         </li>
-                        <li><a className="ButtonSide" href="#">
+                        <li className="LiMainSide"><a className="ButtonSide" href="#">
                             <i className="fas fa-list"></i>
                             <span className="nav-item">Coleção</span>
                         </a>
                         </li>
-                        <li><a className="ButtonSide" href="#">
+                        <li className="LiMainSide"><a className="ButtonSide" href="/Informacoes">
                             <i className="fas fa-info"></i>
                             <span className="nav-item">Informações</span>
                         </a>
                         </li>
-                        <li><a className="ButtonSide-baixo" href="#">
+                        <li className="LiMainSide"><a className="ButtonSide-baixo" href="#">
                             <i className="fas fa-address-card"></i>
                             <span className="nav-item">Sobre nós</span>
                         </a>

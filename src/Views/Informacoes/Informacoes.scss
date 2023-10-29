@@ -1,0 +1,101 @@
+.HeaderInfo {
+    background-color: #fff;
+    color: #fff;
+    text-align: center;
+}
+
+.ContainerInfo {
+    display: flex;
+    flex-direction: column;
+    max-width: 90%;
+    height: 90%;
+    margin: 10px auto;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    align-items: center;
+    justify-content: center;
+}
+
+.InfoValue{
+    max-width: 90%;
+    max-height: 100%;
+    margin: 0 auto;
+    display: inline-block;
+
+    p {
+        display: inline-block;
+        margin: 0 auto;
+    }
+}
+
+.SetaEsquerdaInfo{
+    padding-left: 2%;
+    padding-top: 2%;
+    float: left;
+    :hover{
+        background-color: yellow;
+    }
+    i{
+        font-size: 3em;
+    }
+}
+
+.UlInfo {
+    list-style: disc;
+    margin-left: 20px;
+}
+
+@media screen and (max-width: 600px) {
+    .ContainerInfo {
+        max-width: 100%;
+        padding: 10px;
+    }
+
+    .H2Info {
+        font-size: 24px;
+    }
+
+    p {
+        font-size: 12px;
+        line-height: 1.5;
+        margin: 10px 0;
+    }
+
+    .UlInfo {
+        font-size: 12px;
+        margin: 10px 0;
+    }
+}
+
+/* Responsividade para tablets e dispositivos médios */
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+    .ContainerInfo {
+        max-width: 600px; /* Reduz a largura do contêiner */
+        padding: 10px;
+    }
+
+    .H2Info {
+        font-size: 22px; /* Tamanho da fonte maior para tablets */
+    }
+
+    p {
+        font-size: 12px;
+        line-height: 1.5;
+        margin: 10px 0;
+    }
+}
+
+/* Responsividade para dispositivos de tela grande (desktops) */
+@media screen and (min-width: 1025px) {
+    .ContainerInfo {
+        max-width: 800px; /* Largura padrão para desktops */
+        padding: 10px;
+    }
+    p {
+        font-size: 15px;
+        line-height: 1.5;
+        margin: 10px 0;
+    }
+}
