@@ -34,10 +34,6 @@ export default function Home() {
                     </main>
                 </div>
                 <div className='GridLapis'>
-                    {/* <img className="Lapis" src={Lapis} alt="" />
-                    {/* <img className="Lapis" src={Lapis} alt="" />
-                            <img className="Lapis" src={Lapis} alt="" />
-                            <img className="Lapis" src={Lapis} alt="" /> */} */
                 </div>
             </div>
         </>

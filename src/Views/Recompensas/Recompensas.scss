@@ -1,0 +1,62 @@
+.SetaEsquerdaRecompensas{
+    padding-left: 2%;
+    padding-top: 2%;
+    float: left;
+    :hover{
+        background-color: yellow;
+    }
+    i{
+        font-size: 3em;
+    }
+}
+
+.Container-Recompensas {
+    display: flex;
+    flex-direction: column;
+    max-width: 80%;
+    height: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    align-items: center;
+    justify-content: center;
+    .Recompensas{
+        height: 100%;
+        width: 100%;
+    }
+}
+
+.Header-Recompensa {
+    background-color: #f4f4f4;
+    color: #f4f4f4;
+    text-align: center;
+}
+
+.Colecao{
+    margin: auto;
+    max-height: 50%;
+    max-width: 50%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 5%;
+    list-style-type: none;
+    .Item-Colecao{
+        border-radius: 5%;
+        padding: 5px;
+        border: 1px solid;
+        flex-direction: row;
+        text-align: center;
+        .Trophys{
+            max-height: 100%;
+            max-width: 90%;
+        }
+        .Num-Trophy{
+            font: Comic;
+            font-size: large;
+            font-weight: bolder;
+        }
+    }
+}
+
