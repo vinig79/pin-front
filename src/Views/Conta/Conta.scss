@@ -1,0 +1,29 @@
+.Container-Conta{
+    display: flex;
+    flex-direction: column;
+    max-width: 40%;
+    height: 40%;
+    margin: 10px auto;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    align-items: center;
+    justify-content: center;
+}
+.User-info{
+    margin: 20px 0;
+    
+}
+
+.SetaEsquerdaConta{
+    padding-left: 2%;
+    padding-top: 2%;
+    float: left;
+    :hover{
+        background-color: yellow;
+    }
+    i{
+        font-size: 3em;
+    }
+}
