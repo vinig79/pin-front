@@ -1,107 +1,48 @@
-.SetaEsquerdaRecompensas{
-    padding-left: 2%;
-    padding-top: 2%;
-    float: left;
-    :hover{
-        background-color: yellow;
-    }
-    i{
-        font-size: 3em;
-    }
+.flx {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 200px;
+  margin-top: 7%;
+  margin-left: 5%;
+  width: 90%;
+  border-radius: 15px;
+  background: linear-gradient(to TOP, #9fcee8, #b1ecb1);
 }
 
-.Container-Recompensas {
-    display: flex;
-    flex-direction: column;
-    max-width: 80%;
-    height: 80%;
-    margin: 10px auto;
-    padding: 20px;
-    background-color: #f4f4f4;
-    border-radius: 5px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-    align-items: center;
-    justify-content: center;
-    .Recompensas{
-        height: 100%;
-        width: 100%;
-    }
+.flz {
+  display: flex;
+  flex-direction: row; /* Alterado de 'column' para 'row' */
 }
 
-.Header-Recompensa {
-    background-color: #f4f4f4;
-    color: #f4f4f4;
-    text-align: center;
+.mid {
+  position: relative;
 }
 
-.Colecao{
-    margin: auto;
-    max-height: 70%;
-    max-width: 70%;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 8%;
-    list-style-type: none;
-    .Item-Colecao{
-        border-radius: 5%;
-        padding: 5px;
-        border: 1px solid;
-        flex-direction: row;
-        text-align: center;
-        .Trophys{
-            max-height: 100%;
-            max-width: 90%;
-        }
-        .Num-Trophy{
-            font: Comic;
-            font-size: large;
-            font-weight: bolder;
-        }
-    }
-}
-
-@media (min-width: 0px) {
-    /* smartphones, iPhone, portrait 480x320 phones */
-    .Colecao {
-      grid-template-columns: repeat(2, 1fr);
-    }
-    .Item-Colecao{
-      img{
-        max-height: 200px;
-        width: 120px;
-      }
-    }
+.f1, .f2, .f3, .f5, .f6, .f7 {
+  img{
+    width: 200px;
+    height: 200px;
+    transform-origin: center;
   }
   
-  @media (min-width: 540px) {
-    /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
-    .Colecao {
-      grid-template-columns: repeat(2, 1fr);
-    }
-    .Item-Colecao{
-      img{
-        max-height: 200px;
-        width: 180px;
-      }
-      
-    }
-  }
+  position: absolute;
+}
 
-  @media (min-width: 770px) {
-    .Colecao {
-      grid-template-columns: repeat(3, 1fr);
-    }
+.f4 {
+  img{
+    width: 400px;
+    height: 400px;
   }
+  margin-top: 100px;
+  z-index: 2;
+}
 
-  @media (min-width: 1024px) {
-    .Colecao {
-      grid-template-columns: repeat(3, 1fr);
-    }
-  }
+/* Posicionamento das divs laterais circundando a f4 */
+.f1 { left: 50%; transform: translateX(-50%) rotate(315deg) translateY(-300px); img { transform: rotate(45deg);} }
+.f2 { left: 50%; transform: translateX(-50%) rotate(270deg) translateY(-300px); img { transform: rotate(90deg);}}
+.f3 { left: 50%; transform: translateX(-50%) rotate(225deg) translateY(-300px); img { transform: rotate(135deg);}}
+.f5 { left: 50%; transform: translateX(-50%) rotate(45deg) translateY(-300px);  img { transform: rotate(315deg);}}
+.f6 { left: 50%; transform: translateX(-50%) rotate(90deg) translateY(-300px);  img { transform: rotate(270deg);}}
+.f7 { left: 50%; transform: translateX(-50%) rotate(135deg) translateY(-300px); img { transform: rotate(225deg);}}
 
-  @media (min-width: 1281px) {
-    /* hi-res laptops and desktops */
-    .Colecao {
-      grid-template-columns: repeat(3, 1fr);
-    }
-  }

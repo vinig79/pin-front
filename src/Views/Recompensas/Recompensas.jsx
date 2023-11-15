@@ -1,32 +1,55 @@
+import styles from "./Recompensas.scss";
 
-
-import styles from './Recompensas.scss'
+const animal = {
+	coelhotcc : require('./Imagens/coelhotcc.png'),
+	elefantetcc : require('./Imagens/elefantetcc.png'),
+	leaotcc : require('./Imagens/leaotcc.png'),
+	extratcc : require('./Imagens/extratcc.png'),
+	macacotcc : require('./Imagens/macacotcc.png'),
+	sapotcc : require('./Imagens/sapotcc.png'),
+	tigretcc : require('./Imagens/trigretcc.png'),
+}
 export default function Recompensas() {
-    let itens = []
-    for (let i = 1; i <= 6; i++) {
-        itens.push(<div key={i} className='Item-Colecao'>        
-            <img className='Trophys' src={require(`./Imagens/trophy.png`)} alt="" />
-            <p className='Num-Trophy'>{i}</p>
-        </div>)
-    }
-    return(
-        <>
-            <a className='SetaEsquerdaRecompensas' href='/'> <i className="fas fa-arrow-left"></i> </a>
-            <div className='Container-Recompensas'>
-                <div className='Recompensas'>
-                    <header className="Header-Recompensa">
-                        <h2 className='H2Recompensa'>Coleção</h2>
-                    </header>
-                    <div className='Colecao'>
-                        {itens.map((itens, index) => (
-                            <>
-                                {itens}
-                            </>
-                        ))}
-                    </div>
-                    
-                </div>
-            </div>
-        </>
-    )
+  let itens = [];
+  for (let i = 1; i <= 6; i++) {
+    itens.push(
+      <div key={i} className="Item-Colecao">
+        <img className="Trophys" src={require(`./Imagens/trophy.png`)} alt="" />
+        <p className="Num-Trophy">{i}</p>
+      </div>
+    );
+  }
+  return (
+    <>
+      <div className="flx">
+        <div className="flz">
+          <div className="f1">
+						<img  src={animal.elefantetcc} alt="" />
+					</div>
+          <div className="f2">
+						<img src={animal.coelhotcc} alt="" />
+					</div>
+          <div className="f3">
+						<img src={animal.leaotcc} alt="" />
+					</div>
+        </div>
+				<div className="mid">
+        	<div className="f4">
+						<img src={animal.extratcc} alt="" />
+					</div>
+				</div>
+				<div className="fly">
+					<div className="f5">
+						<img src={animal.macacotcc} alt="" />	
+					</div>
+					<div className="f6">
+						<img src={animal.tigretcc} alt="" />
+					</div>
+					<div className="f7">
+						<img src={animal.sapotcc} alt="" />
+					</div>
+				</div>
+      </div>
+    </>
+  );
 }

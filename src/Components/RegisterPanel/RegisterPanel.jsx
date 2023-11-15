@@ -1,6 +1,6 @@
 import styles from "./RegisterPanel.scss";
 import axios from "axios";
-import { useState } from 'react';
+import { useState , useEffect } from 'react';
 import { useNavigate } from "react-router-dom";
 
 export default function RegisterPanel() {
@@ -10,6 +10,7 @@ export default function RegisterPanel() {
 
     const handleInput = (event) => {
         setData({ ...data, [event.target.name]: event.target.value });
+        console.log(data.isprofessor)
     }
     // const handleSubmit = (event) =>{
     //     event.preventDefault();
@@ -36,7 +37,7 @@ export default function RegisterPanel() {
                         <input type="text" className="register-input" placeholder="Nome" name="nome" onChange={handleInput} required/>
                         <input type="email" className="register-input" placeholder="Email" name="email" onChange={handleInput} required/>
                         <input type="password" className="register-input" placeholder="Senha" name="password1" onChange={handleInput} required/>
-                        <input type="password" className="register-input" placeholder="Confirmar Senha" name="password2" onChange={handleInput} required/>
+                        <input type="password" className="register-input" placeholder="Confirmar Senha" name="password2" onChange={handleInput}required/>
                         <button type="submit" className="register-button" >Registrar</button>
                         <div className="Login">
                             <p>Deseja logar?</p>
