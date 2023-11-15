@@ -1,0 +1,31 @@
+.container-atividade{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    span{
+        margin: 20px;
+        padding: 5px;
+        border: 1px solid;
+        border-radius: 30px;
+    }
+    .Nice{
+        font-size: 50px;
+        color: green;
+        font-weight: bolder;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    /* Estilos para dispositivos com largura máxima de 600px (celulares, por exemplo) */
+
+    .VideoAula {
+      max-width: 100%; /* Vídeo ocupando 100% da largura */
+    }
+
+    span {
+      font-size: 24px; /* Reduzir o tamanho da fonte para telas menores */
+      margin: 5px; /* Reduzir o espaçamento entre as letras */
+    }
+}

@@ -4,6 +4,9 @@ import { useParams  } from 'react-router-dom';
 import Atividade1 from '../../Components/Atividade1/Atividade1.jsx';
 import Atividade2 from '../../Components/Atividade2/Atividade2.jsx';
 import Atividade3 from '../../Components/Atividade3/Atividade3.jsx';
+import Atividade4 from '../../Components/Atividade4/Atividade4.jsx';
+import Atividade5 from '../../Components/Atividade5/Atividade5.jsx';
+import Atividade6 from '../../Components/Atividade6/Atividade6.jsx';
 
 import styles from './Videos.scss'
 const Video = () => {
@@ -21,7 +24,15 @@ const Video = () => {
     case '3':
       componenteAtividade = <Atividade3 />;
       break;
-    // // Adicione mais casos para as outras atividades
+    case '4':
+      componenteAtividade = <Atividade4 />;
+      break;
+    case '5':
+      componenteAtividade = <Atividade5 />;
+      break;
+    case '6':
+      componenteAtividade = <Atividade6 />;
+      break;
     default:
       componenteAtividade = <Atividade1 />;
   }
