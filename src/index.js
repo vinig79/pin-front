@@ -27,7 +27,7 @@ const router = createBrowserRouter([
     path:"Register",
     element:<Register/>,
   },{
-    path: "Videos",
+    path: "Videos/:numeroAtividade",
     element:<Videos/>,
   },{
     path: "Informacoes",

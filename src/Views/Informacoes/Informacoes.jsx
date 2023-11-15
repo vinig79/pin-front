@@ -11,7 +11,10 @@ export default function Informacoes() {
                 <div className="ContainerInfo">
                     <div className='InfoValue'>
                         <header className="HeaderInfo">
-                            <h2 className='H2Info'>Síndrome de Down e Leitura</h2>
+                            <div>
+                                <h2 className='H2Info'>Síndrome de Down e Leitura</h2>
+                            </div>
+                            
                         </header>
 
                         <p>A Síndrome de Down é uma condição genética que ocorre devido à presença de um cromossomo extra no par 21, resultando em um total de 47 cromossomos em vez dos 46 habituais. Isso causa um conjunto de características físicas e desafios de desenvolvimento.</p>

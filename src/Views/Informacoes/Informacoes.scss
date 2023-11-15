@@ -1,19 +1,18 @@
 .HeaderInfo {
-    background-color: #fff;
     color: #fff;
     text-align: center;
 }
 
 .ContainerInfo {
+    margin: 10px auto;
     display: flex;
     flex-direction: column;
     max-width: 90%;
     height: 90%;
-    margin: 0 auto;
     padding: 20px;
     background-color: #f4f4f4;
-    border-radius: 5px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
     align-items: center;
     justify-content: center;
 }
@@ -24,6 +23,12 @@
     margin: 0 auto;
     display: inline-block;
 
+    .rainbow-text {
+        background-image: linear-gradient(to left, rgb(0, 0, 255), rgb(0, 245, 0), rgb(255, 0, 0));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+      
     p {
         display: inline-block;
         margin: 0 auto;
