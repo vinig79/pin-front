@@ -12,24 +12,21 @@
 
 .Container-SobreNos{
     display: flex;
-    flex-direction: column;
-    max-width: 80%;
-    height: 80%;
-    margin: 10px auto;
-    padding: 20px;
-    background-color: #f4f4f4;
-    border-radius: 5px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
     align-items: center;
     justify-content: center;
+    padding-bottom: 200px;
+    margin-top: 7%;
+    margin-left: 5%; 
+    width: 90%;
+    border-radius: 15px;
+    background: linear-gradient(to TOP, #9fcee8, #b1ecb1);
     .SobreNos{
         height: 100%;
         width: 100%;
     }
 }
 
-.Header-SobreNos {
-    background-color: #f4f4f4;
+.Header-SobreNos { 
     color: #f4f4f4;
     text-align: center;
 }

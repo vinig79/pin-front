@@ -4,15 +4,14 @@ h1 {
 
 .ContainerAula {
     display: flex;
-    flex-direction: column;
-    max-width: 80%;
-    height: 70%;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #f4f4f4;
-    border-radius: 5px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
     align-items: center;
+    justify-content: center;
+    margin-top: 4%;
+    margin-left: 5%;
+    height: 80%;
+    width: 90%;
+    border-radius: 100px;
+    background: linear-gradient(to TOP, #9fcee8, #b1ecb1);
 }
 
 .SetaEsquerdaVideo{
@@ -28,6 +27,7 @@ h1 {
 }
 
 .VideoAula {
+    padding-top: 20px;
     width: 80%;
     height: 80%;
 }

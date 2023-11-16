@@ -1,15 +1,12 @@
 .Container-Conta{
     display: flex;
-    flex-direction: column;
-    max-width: 40%;
-    height: 40%;
-    margin: 10px auto;
     padding: 20px;
-    background-color: #f4f4f4;
-    border-radius: 5px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-    align-items: center;
-    justify-content: center;
+    padding-bottom: 200px;
+    margin-top: 7%;
+    margin-left: 5%;
+    width: 90%;
+    border-radius: 15px;
+    background: linear-gradient(to TOP, #9fcee8, #b1ecb1);
 }
 .User-info{
     margin: 20px 0;

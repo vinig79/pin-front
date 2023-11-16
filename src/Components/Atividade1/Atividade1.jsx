@@ -33,13 +33,9 @@ const Atividade1 = () => {
   const allAsHighlighted = letters.every((letter) => letter.letter !== 'A' || letter.highlighted);
 
   return (
-    <div className='container-atividade'>
-        <h2> 
-            Aula 1
-        </h2>
-        
+    <div className='container-atividade'>       
         <iframe className='VideoAula' src="https://www.youtube.com/embed/bWVNZ4T-g44?si=ckEJmfeAssDK6fR9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        <div>
+        <div style={{marginTop:'50px'}}>
             {letters.map((letter, index) => (
             <span
                 key={index}
@@ -50,7 +46,7 @@ const Atividade1 = () => {
             </span>
             ))}
         </div> 
-        {allAsHighlighted && <p className='Nice'>Parabéns!</p>}
+        {allAsHighlighted && <div className='winnable'></div>}
     </div>
   );
 };

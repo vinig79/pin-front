@@ -1,8 +1,12 @@
+import React, { useState } from 'react';
 
-export default function Atividade4(){
+import styles from './Atividade4.scss'
+const Atividade4 = () => {
     return(
         <>
         
         </>
-    )
-}
+    );
+};
+
+export default Atividade4
