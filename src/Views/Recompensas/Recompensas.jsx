@@ -10,15 +10,6 @@ const animal = {
 	tigretcc : require('./Imagens/trigretcc.png'),
 }
 export default function Recompensas() {
-  let itens = [];
-  for (let i = 1; i <= 6; i++) {
-    itens.push(
-      <div key={i} className="Item-Colecao">
-        <img className="Trophys" src={require(`./Imagens/trophy.png`)} alt="" />
-        <p className="Num-Trophy">{i}</p>
-      </div>
-    );
-  }
   return (
     <>
       <div className="flx">

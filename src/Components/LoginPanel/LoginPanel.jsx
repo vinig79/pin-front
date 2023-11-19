@@ -11,11 +11,10 @@ export default function LoginPanel(){
         setData({...data, [event.target.name]: event.target.value});
     };
 
-    const handleSubmit = (event) =>{
+    const handleSubmit = async (event) =>{
         event.preventDefault();
-        //axios.post('http://localhost:5000/login',data).catch(()=>{
-        //    console.log('erro')
-        //})
+        const response = axios.post('http://localhost:5000/login',data)
+        
         navigate('/')
     };
 
