@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 
 import styles from './Atividade1.scss'
+const Alfabeto = require('./Imagens/alfabeto.png');
 const Atividade1 = () => {
   const [letters, setLetters] = useState([
     { letter: 'A', highlighted: false },
@@ -21,6 +22,9 @@ const Atividade1 = () => {
 
   const handleClick = (index) => {
     const updatedLetters = [...letters];
+    if (updatedLetters[index].letter === 'A'){
+
+    }
     if (updatedLetters[index].letter === 'A' && !updatedLetters[index].highlighted) {
       updatedLetters[index].highlighted = true;
       setLetters(updatedLetters);
@@ -29,13 +33,15 @@ const Atividade1 = () => {
       setLetters(letters.map((letter) => ({ ...letter, highlighted: false })));
     }
   };
-
   const allAsHighlighted = letters.every((letter) => letter.letter !== 'A' || letter.highlighted);
 
   return (
     <div className='container-atividade'>       
         <iframe className='VideoAula' src="https://www.youtube.com/embed/bWVNZ4T-g44?si=ckEJmfeAssDK6fR9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        <div style={{marginTop:'50px'}}>
+        
+        <img style={{marginTop:'10px', backgroundColor:'#ffffff', borderRadius:'100px'}} src={Alfabeto} alt="" />
+        
+        <div style={{marginTop:'30px'}}>
             {letters.map((letter, index) => (
             <span
                 key={index}
