@@ -38,13 +38,13 @@ const Atividade3 = () => {
                 <span
                     key={index}
                     onClick={() => handleClick(index)}
-                    style={{ marginRight: '5px', fontSize: '50px', backgroundColor: letter.highlighted ? 'yellow' : '#f4f4f4'}}
+                    style={{ marginRight: '5px', fontSize: '50px', backgroundColor: letter.highlighted ? 'yellow' : '#f4f4f4', cursor:"pointer"}}
                 >
                     {letter.letter}
                 </span>
                 ))}
             </div> 
-            {allAsHighlighted && <div className='winnable'></div>}
+            {allAsHighlighted && <div className='winnable3'></div>}
         </div>
       );
     };
