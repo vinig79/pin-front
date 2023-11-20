@@ -14,7 +14,6 @@ export default function LoginPanel(){
     const handleSubmit = async (event) =>{
         event.preventDefault();
         const response = axios.post('http://localhost:5000/login',data)
-        
         navigate('/')
     };
 

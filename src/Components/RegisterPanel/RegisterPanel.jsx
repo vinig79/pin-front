@@ -33,17 +33,17 @@ export default function RegisterPanel() {
     if (data.password1 !== data.password2) {
       setError({ passwordError: "senhas não são iguais" });
     } else {
-      console.log(data);
       const response = await axios.post(
         "https://pin-back.vercel.app/register",
         data
       );
 
-      console.log(response)
-      if (response) {
+      console.log(response);
+      if (response.data.error) {
         setError({ cadastroError: response?.data.error });
       } else {
-        navigate("/login");
+        console.log("oi")
+        navigate("/Login");
       }
     }
   };
