@@ -4,27 +4,18 @@ import styles from './Atividade1.scss'
 const Alfabeto = require('./Imagens/alfabeto.png');
 const Atividade1 = () => {
   const [letters, setLetters] = useState([
-    { letter: 'A', highlighted: false },
+    { letter: 'A', highlighted: false, resposta: true },
     { letter: 'H', highlighted: false },
-    { letter: 'U', highlighted: false },
-    { letter: 'T', highlighted: false },
-    { letter: 'F', highlighted: false },
     { letter: 'G', highlighted: false },
-    { letter: 'A', highlighted: false },
+    { letter: 'A', highlighted: false, resposta: true},
     { letter: 'W', highlighted: false },
-    { letter: 'K', highlighted: false },
-    { letter: 'B', highlighted: false },
     { letter: 'L', highlighted: false },
-    { letter: 'A', highlighted: false },
-    { letter: 'G', highlighted: false },
-    { letter: 'A', highlighted: false },
+    { letter: 'A', highlighted: false, resposta: true },
+
   ]);
 
   const handleClick = (index) => {
     const updatedLetters = [...letters];
-    if (updatedLetters[index].letter === 'A'){
-
-    }
     if (updatedLetters[index].letter === 'A' && !updatedLetters[index].highlighted) {
       updatedLetters[index].highlighted = true;
       setLetters(updatedLetters);
@@ -39,19 +30,29 @@ const Atividade1 = () => {
     <div className='container-atividade'>       
         <iframe className='VideoAula' src="https://www.youtube.com/embed/bWVNZ4T-g44?si=ckEJmfeAssDK6fR9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         
-        <img style={{marginTop:'10px', backgroundColor:'#ffffff', borderRadius:'100px'}} src={Alfabeto} alt="" />
-        
-        <div style={{marginTop:'30px'}}>
-            {letters.map((letter, index) => (
-            <span
-                key={index}
-                onClick={() => handleClick(index)}
-                style={{ marginRight: '5px', fontSize: '50px', backgroundColor: letter.highlighted ? 'yellow' : '#f4f4f4', cursor:"pointer"}}
-            >
-                {letter.letter}
-            </span>
-            ))}
-        </div> 
+        {/* <img style={{height:'30%', marginTop:'10px', backgroundColor:'#ffffff', borderRadius:'100px'}} src={Alfabeto} alt="" /> */}
+          <div style={{marginTop:'30px', display:'flex', flexDirection:'row',}}>
+              {letters.map((letter, index) => (
+              <span
+                  key={index}
+                  onClick={() => handleClick(index)}
+                  style={{ display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  height: '180px',
+                  width: '180px',
+                  borderRadius: '50%',
+                  marginRight: '5px',
+                  fontSize: '180px',
+                  color: letter.resposta ? '#23110f' : 'black',
+                  backgroundColor: letter.highlighted ? '#23b80f' : '#678eff',
+                  cursor: 'pointer',
+                  borderColor: 'black',}}
+              >
+                  {letter.letter}
+              </span>
+              ))}
+          </div>     
         {allAsHighlighted && <div className='winnable1'></div>}
     </div>
   );

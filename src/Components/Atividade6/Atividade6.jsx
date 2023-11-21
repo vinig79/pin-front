@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 
 import styles from "./Atividade6.scss";
+const Alfabeto = require('./Imagens/alfabeto.png');
 const Atividade6 = () => {
   const words = ["BOLA", "PATO", "DADO"];
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
@@ -28,19 +29,18 @@ const Atividade6 = () => {
     <div className='container-atividade'> 
       <iframe className='VideoAula' src="https://www.youtube.com/embed/ZoeFkk2a09M?si=7JcV5Y2k8W5T2WVV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
       
-      <p>Digite as letras para formar: {words[currentWordIndex]}</p>
-      <input
-        type="text"
-        onKeyPress={handleKeyPress}
-        value={currentInput}
-        readOnly
-      />
+      <div style={{marginTop:'20px', display:'flex', flexDirection:'column', justifyContent:'center', alignItems:'center'}}>
+        <p style={{fontWeight:'bold', fontSize:'130px', justifyContent:'center'}}>{words[currentWordIndex]}</p>
+        <input
+          type="text"
+          onKeyPress={handleKeyPress}
+          value={currentInput}
+          style={{height:'30%', width:'50%', fontSize:'100px', justifyContent:'center', borderRadius:'10px', backgroundColor:'#678eff'}}
+        />
+      </div>
       {gameStatus && <div className='winnable6'></div>}
     </div>
   );
 };
 
 export default Atividade6;
-{
-  /* <iframe className='VideoAula' src="https://www.youtube.com/embed/ZoeFkk2a09M?si=7JcV5Y2k8W5T2WVV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> */
-}
