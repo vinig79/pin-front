@@ -1,18 +1,19 @@
 import React, { useState } from 'react';
 
 import styles from './Atividade5.scss'
+const Alfabeto = require('./Imagens/alfabeto.png');
 const Atividade5 = () => {
   const [letters, setLetters] = useState([
-    { letter: '🌳', highlighted: false },
+    { letter: '🌳', highlighted: false, resposta: true },
     { letter: '🧤', highlighted: false },
-    { letter: '💍', highlighted: false },
+    { letter: '💍', highlighted: false, resposta: true},
     { letter: '👠', highlighted: false },
-    { letter: '🦅', highlighted: false },
+    { letter: '✈️', highlighted: false, resposta: true },
   ]);
 
   const handleClick = (index) => {
     const updatedLetters = [...letters];
-    if ((updatedLetters[index].letter === '🌳' || updatedLetters[index].letter === '💍' || updatedLetters[index].letter === '🦅') && !updatedLetters[index].highlighted) {
+    if ((updatedLetters[index].letter === '🌳' || updatedLetters[index].letter === '💍' || updatedLetters[index].letter === '✈️') && !updatedLetters[index].highlighted) {
       updatedLetters[index].highlighted = true;
       setLetters(updatedLetters);
     } else {
@@ -21,17 +22,29 @@ const Atividade5 = () => {
     }
   };
 
-  const allAsHighlighted = letters.every((letter) => (letter.letter !== '🌳' && letter.letter !== '💍' && letter.letter !== '🦅') || letter.highlighted);
+  const allAsHighlighted = letters.every((letter) => (letter.letter !== '🌳' && letter.letter !== '💍' && letter.letter !== '✈️') || letter.highlighted);
 
   return (
     <div className='container-atividade'>       
         <iframe className='VideoAula' src="https://www.youtube.com/embed/EBsUyKtK13I?si=7iJoJ36UuL8VDqx-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        <div style={{marginTop:'50px'}}>
+        {/* <img style={{height:'30%', marginTop:'10px', backgroundColor:'#ffffff', borderRadius:'100px'}} src={Alfabeto} alt="" /> */}
+        <div style={{marginTop:'50px', display:'flex', flexDirection:'row',}}>
             {letters.map((letter, index) => (
             <span
                 key={index}
                 onClick={() => handleClick(index)}
-                style={{ marginRight: '5px', fontSize: '50px', backgroundColor: letter.highlighted ? 'yellow' : '#f4f4f4', cursor:"pointer"}}
+                style={{ display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                height: '180px',
+                width: '180px',
+                borderRadius: '50%',
+                marginRight: '5px',
+                fontSize: '120px',
+                color: letter.resposta ? '#23110f' : 'black',
+                backgroundColor: letter.highlighted ? '#23b80f' : '#678eff',
+                cursor: 'pointer',
+                borderColor: 'black',}}
             >
                 {letter.letter}
             </span>

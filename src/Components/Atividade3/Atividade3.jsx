@@ -1,20 +1,17 @@
 import React, { useState } from 'react';
 
 import styles from './Atividade3.scss'
+const Alfabeto = require('./Imagens/alfabeto.png');
 const Atividade3 = () => {
     //N O L R S E W Q A
     const [letters, setLetters] = useState([
-        { letter: 'U', highlighted: false },
+        { letter: 'U', highlighted: false, resposta: true },
         { letter: 'N', highlighted: false },
-        { letter: 'O', highlighted: false },
-        { letter: 'L', highlighted: false },
-        { letter: 'R', highlighted: false },
-        { letter: 'I', highlighted: false },
         { letter: 'S', highlighted: false },
-        { letter: 'E', highlighted: false },
+        { letter: 'E', highlighted: false, resposta: true },
         { letter: 'W', highlighted: false },
         { letter: 'Q', highlighted: false },
-        { letter: 'A', highlighted: false },
+        { letter: 'A', highlighted: false, resposta: true },
       ]);
     
       const handleClick = (index) => {
@@ -33,12 +30,24 @@ const Atividade3 = () => {
       return (
         <div className='container-atividade'>       
             <iframe className='VideoAula' src="https://www.youtube.com/embed/lkdpQbUuuuI?si=336LC7Buoj8_bOX6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-            <div style={{marginTop:'50px'}}>
+            {/* <img style={{height:'30%', marginTop:'10px', backgroundColor:'#ffffff', borderRadius:'100px'}} src={Alfabeto} alt="" /> */}
+            <div style={{marginTop:'50px', display:'flex', flexDirection:'row',}}>
                 {letters.map((letter, index) => (
                 <span
                     key={index}
                     onClick={() => handleClick(index)}
-                    style={{ marginRight: '5px', fontSize: '50px', backgroundColor: letter.highlighted ? 'yellow' : '#f4f4f4', cursor:"pointer"}}
+                    style={{ display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    height: '180px',
+                    width: '180px',
+                    borderRadius: '50%',
+                    marginRight: '5px',
+                    fontSize: '180px',
+                    color: letter.resposta ? '#23110f' : 'black',
+                    backgroundColor: letter.highlighted ? '#23b80f' : '#678eff',
+                    cursor: 'pointer',
+                    borderColor: 'black',}}
                 >
                     {letter.letter}
                 </span>
