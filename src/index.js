@@ -5,6 +5,7 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import reportWebVitals from './reportWebVitals';
+import { AuthProvider } from './context/Authenticate.jsx';
 //Pages
 import Home from './Views/Home/Home.jsx';
 import Login from './Views/Login/Login.jsx';
@@ -46,7 +47,9 @@ const router = createBrowserRouter([
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <RouterProvider router={router} />
+  <AuthProvider>
+    <RouterProvider router={router} />
+  </AuthProvider>
 )
  
 reportWebVitals();

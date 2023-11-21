@@ -1,9 +1,13 @@
 import { useNavigate } from 'react-router-dom';
 import Logo from "../../Assets/Logo.png"
+import { useAuth } from '../../context/Authenticate';
 
 import styles from './MainNavBar.scss';
 export default function MainNavBar(){
     const navigate = useNavigate();
+    const { logado, logout } = useAuth();
+
+    console.log(logado)
      
     return(
         <>
@@ -15,8 +19,15 @@ export default function MainNavBar(){
                 <img className="LogoMain" src={Logo} />
             </div>
             <div className="nav-buttons">
-                <a type="submit" onClick={ () =>{navigate('/Login')}}>Entrar </a>
-                <a type="submit" onClick={() =>{navigate('/Register')}}>Registrar </a>
+                { logado ? (
+                    <a type='submit' onClick={() =>{ logout(); navigate('/')}}>Logout</a>
+                ) :(
+                    <>
+                        <a type="submit" onClick={ () =>{navigate('/Login')}}>Entrar </a>
+                        <a type="submit" onClick={() =>{navigate('/Register')}}>Registrar </a>
+                    </>
+                )
+                }
             </div>
             </navbar>
         </>
