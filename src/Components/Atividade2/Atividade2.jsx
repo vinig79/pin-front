@@ -42,6 +42,7 @@ const Atividade2 = () => {
             <iframe className='VideoAula' src="https://www.youtube.com/embed/JTkid5jrMRQ?si=sOGOoQngNdS7GFnO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
             {/* <img style={{height:'30%', marginTop:'10px', backgroundColor:'#ffffff', borderRadius:'100px'}} src={Alfabeto} alt="" /> */}
+            {(allAsHighlighted && allAsHighlighted2) ? ( <div className='winnable2'></div>):(
 
             <div style={{display:'flex', flexDirection:'row', gridGap:'200px'}}>
               <div style={{alignItens:'center'}}>
@@ -100,7 +101,8 @@ const Atividade2 = () => {
                   
                 </div>          
               </div>
-              {(allAsHighlighted && allAsHighlighted2) && <div className='winnable2'></div>}
+            )}
+             
             </div>      
     );
 };

@@ -31,29 +31,33 @@ const Atividade3 = () => {
         <div className='container-atividade'>       
             <iframe className='VideoAula' src="https://www.youtube.com/embed/lkdpQbUuuuI?si=336LC7Buoj8_bOX6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             {/* <img style={{height:'30%', marginTop:'10px', backgroundColor:'#ffffff', borderRadius:'100px'}} src={Alfabeto} alt="" /> */}
-            <div style={{marginTop:'50px', display:'flex', flexDirection:'row',}}>
-                {letters.map((letter, index) => (
-                <span
-                    key={index}
-                    onClick={() => handleClick(index)}
-                    style={{ display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    height: '180px',
-                    width: '180px',
-                    borderRadius: '50%',
-                    marginRight: '5px',
-                    fontSize: '180px',
-                    color: letter.resposta ? '#23110f' : 'black',
-                    backgroundColor: letter.highlighted ? '#23b80f' : '#678eff',
-                    cursor: 'pointer',
-                    borderColor: 'black',}}
-                >
-                    {letter.letter}
-                </span>
-                ))}
-            </div> 
-            {allAsHighlighted && <div className='winnable3'></div>}
+            {allAsHighlighted ? (<div className='winnable3'></div>):
+            (
+
+              <div style={{marginTop:'50px', display:'flex', flexDirection:'row',}}>
+                  {letters.map((letter, index) => (
+                  <span
+                      key={index}
+                      onClick={() => handleClick(index)}
+                      style={{ display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      height: '180px',
+                      width: '180px',
+                      borderRadius: '50%',
+                      marginRight: '5px',
+                      fontSize: '180px',
+                      color: letter.resposta ? '#23110f' : 'black',
+                      backgroundColor: letter.highlighted ? '#23b80f' : '#678eff',
+                      cursor: 'pointer',
+                      borderColor: 'black',}}
+                  >
+                      {letter.letter}
+                  </span>
+                  ))}
+              </div> 
+            )}
+            
         </div>
       );
     };

@@ -12,7 +12,7 @@
     margin-left: 5%;
     width: 90%;
     border-radius: 15px;
-    background: linear-gradient(to TOP, #9fcee8, #b1ecb1);
+    background: white;
 }
 
 .InfoValue{
@@ -29,7 +29,12 @@
       
     p {
         display: inline-block;
+        font-size: 20px;
         margin: 0 auto;
+        text-indent: 3ch;
+    }
+    li{
+        font-size: 20px;
     }
 }
 

@@ -9,6 +9,22 @@
   border-radius: 15px;
   background: linear-gradient(to TOP, #9fcee8, #b1ecb1);
 }
+.flx1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-top: 7%;
+  margin-left: 5%;
+  width: 90%;
+  border-radius: 15px;
+  background: linear-gradient(to TOP, #9fcee8, #b1ecb1);
+}
+
+.flo {
+  display: flex;
+  flex-direction: column; /* Alterado de 'column' para 'row' */
+}
 
 .flz {
   display: flex;
@@ -18,6 +34,17 @@
 .mid {
   position: relative;
 }
+.f{
+  img{
+    height: 200px;
+    width:  200px;
+  }
+  margin: 20px;
+}
+.v{
+    display:flex;
+
+  }
 
 .f1, .f2, .f3, .f5, .f6, .f7 {
   img{

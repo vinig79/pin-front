@@ -6,8 +6,9 @@ import axios from 'axios';
 const AuthContext = createContext();
 
 const AuthProvider = ({ children }) => {
-  const [user, setUser] = useState();
-  const [logado, setLogado] = useState(localStorage.getItem("logado"));
+  const [user, setUser] = useState({email: localStorage.getItem("userEmail"), name: localStorage.getItem("userName")});
+  let log = localStorage.getItem("logado")
+  const [logado, setLogado] = useState(log);
 
   const login = ( user ) => {
     setUser(user)

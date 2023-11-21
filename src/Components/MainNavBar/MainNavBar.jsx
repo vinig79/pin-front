@@ -19,7 +19,7 @@ export default function MainNavBar(){
                 <img className="LogoMain" src={Logo} />
             </div>
             <div className="nav-buttons">
-                { logado ? (
+                { logado  ? (
                     <a type='submit' onClick={() =>{ logout(); navigate('/')}}>Logout</a>
                 ) :(
                     <>
