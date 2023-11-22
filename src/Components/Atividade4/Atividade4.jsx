@@ -36,7 +36,7 @@ const Atividade4 = () => {
         {/* <img style={{height:'30%', marginTop:'10px', backgroundColor:'#ffffff', borderRadius:'100px'}} src={Alfabeto} alt="" /> */}
         {allAsHighlighted ? (<div className='winnable4'></div>):(
 
-          <div style={{marginTop:'50px', display:'flex', flexDirection:'row',}}>
+          <div style={{marginTop:'50px', display:'flex', flexDirection:'row',transform: 'scale(.8)'}}>
               {letters.map((letter, index) => (
               <span
                   key={index}

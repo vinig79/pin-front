@@ -15,18 +15,19 @@ const animal = {
 
 
 export default function Recompensas() {
-	const [achievementsData, setAchievementsData] = useState([])
+	const [achievementsData, setAchievementsData] = useState()
   useEffect(() => {
-    axios.get("http://localhost:5000/achievement").then(res =>{ console.log(res.data); setAchievementsData(res.data)})
+    axios.get("http://localhost:5000/achievement").then(res =>{ res.data.error ? setAchievementsData([{}]): setAchievementsData(res.data)});
   }, []);
+  
 
   // Lista de IDs dos achievements que você deseja renderizar
-  const idsParaRenderizar = achievementsData.map(item => item.achievements);
+  const idsParaRenderizar = achievementsData ? achievementsData.map(item => item.achievements): "";
 
   return (
     <>
 		<a className='SetaEsquerda' href='/'> <i className="fas fa-arrow-left"></i> </a>
-		{ achievementsData &&  achievementsData.length < 6 ? (
+		{ achievementsData &&  achievementsData.length <= 5 ? (
 			
 			<>
      

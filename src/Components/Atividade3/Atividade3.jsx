@@ -41,7 +41,7 @@ const Atividade3 = () => {
             {allAsHighlighted ? (<div className='winnable3'></div>):
             (
 
-              <div style={{marginTop:'50px', display:'flex', flexDirection:'row',}}>
+              <div style={{marginTop:'50px', display:'flex', flexDirection:'row',transform: 'scale(.7)'}}>
                   {letters.map((letter, index) => (
                   <span
                       key={index}

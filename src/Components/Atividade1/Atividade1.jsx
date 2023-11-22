@@ -39,7 +39,7 @@ const Atividade1 = () => {
 
       {/* <img style={{height:'30%', marginTop:'10px', backgroundColor:'#ffffff', borderRadius:'100px'}} src={Alfabeto} alt="" /> */}
       {allAsHighlighted ? (<div className='winnable1'></div>) :
-        (<div style={{ marginTop: '30px', display: 'flex', flexDirection: 'row', }}>
+        (<div style={{ marginTop: '30px', display: 'flex', flexDirection: 'row', transform: 'scale(.7)' }}>
           {letters.map((letter, index) => (
             <span
               key={index}
@@ -57,6 +57,7 @@ const Atividade1 = () => {
                 backgroundColor: letter.highlighted ? '#23b80f' : '#678eff',
                 cursor: 'pointer',
                 borderColor: 'black',
+                
               }}
             >
               {letter.letter}

@@ -57,7 +57,7 @@ const Atividade2 = () => {
             {/* <img style={{height:'30%', marginTop:'10px', backgroundColor:'#ffffff', borderRadius:'100px'}} src={Alfabeto} alt="" /> */}
             {(allAsHighlighted && allAsHighlighted2) ? ( <div className='winnable2'></div>):(
 
-            <div style={{display:'flex', flexDirection:'row', gridGap:'200px'}}>
+            <div style={{display:'flex', flexDirection:'row', gridGap:'200px', transform: 'scale(.7)'}}>
               <div style={{alignItens:'center'}}>
                   <div style={{display:'flex', color:'black', justifyContent:'center'}}>
                     <h1 style={{color:'black', fontSize:'100px'}}> A B _ </h1>
