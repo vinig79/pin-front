@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import axios from "axios";
 import styles from "./Recompensas.scss";
 
 const animal = {
@@ -11,9 +12,65 @@ const animal = {
 	sapotcc: require('./Imagens/sapotcc.png'),
 }
 
-const allAchiviments = () => {
-	return (
-		<>
+
+
+export default function Recompensas() {
+	const [achievementsData, setAchievementsData] = useState([])
+  useEffect(() => {
+    axios.get("http://localhost:5000/achievement").then(res =>{ console.log(res.data); setAchievementsData(res.data)})
+  }, []);
+
+  // Lista de IDs dos achievements que você deseja renderizar
+  const idsParaRenderizar = achievementsData.map(item => item.achievements);
+
+  return (
+    <>
+		{ achievementsData &&  achievementsData.length < 6 ? (
+			
+			<>
+      <a className='SetaEsquerda' href='/'> <i className="fas fa-arrow-left"></i> </a>
+      <div className="flx1">
+        <div className="flo">
+          <div className="v">
+            {idsParaRenderizar.includes(1) && (
+              <div className="f">
+                <img src={animal.elefantetcc} alt="" id='1'/>
+              </div>
+            )}
+            {idsParaRenderizar.includes(2) && (
+              <div className="f">
+                <img src={animal.coelhotcc} alt="" id='2'/>
+              </div>
+            )}
+            {idsParaRenderizar.includes(3) && (
+              <div className="f">
+                <img src={animal.leaotcc} alt="" id="3"/>
+              </div>
+            )}
+          </div>
+        
+          <div className="v">
+            {idsParaRenderizar.includes(4) && (
+              <div className="f">
+                <img src={animal.macacotcc} alt="" id="4"/>
+              </div>
+            )}
+            {idsParaRenderizar.includes(5) && (
+              <div className="f">
+                <img src={animal.tigretcc} alt="" id="5"/>
+              </div>
+            )}
+						{idsParaRenderizar.includes(6) && (
+              <div className="f">
+                <img src={animal.sapotcc} alt="" id="5"/>
+              </div>
+            )}
+          </div>
+        </div>
+      </div>
+    </>
+		): (
+			<>
 			<div className="flx">
 				<div className="flz">
 					<div className="f1">
@@ -44,40 +101,8 @@ const allAchiviments = () => {
 				</div>
 			</div>
 		</>
-	)
-}
-
-export default function Recompensas() {
-	return (
-		<>
-		 <a className='SetaEsquerda' href='/'> <i className="fas fa-arrow-left"></i> </a>
-			<div className="flx1">
-				<div className="flo">
-					<div className="v">
-						<div className="f">
-							<img src={animal.elefantetcc} alt="" />
-						</div>
-						<div className="f">
-							<img src={animal.coelhotcc} alt="" />
-						</div>
-						<div className="f">
-							<img src={animal.leaotcc} alt="" />
-						</div>
-					</div>
-				
-				
-					<div className="v">
-						<div className="f">
-							<img src={animal.macacotcc} alt="" />
-						</div>
-						<div className="f">
-							<img src={animal.tigretcc} alt="" />
-						</div>
-						
-					</div>
-
-				</div>
-			</div>
+		)}
 		</>
-	);
+  );
+	
 }

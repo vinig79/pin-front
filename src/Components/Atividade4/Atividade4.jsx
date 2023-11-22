@@ -21,14 +21,14 @@ const Atividade4 = () => {
       setLetters(letters.map((letter) => ({ ...letter, highlighted: false })));
     }
   };
+  
+
+  const allAsHighlighted = letters.every((letter) => (letter.letter !== '👄BOCA' && letter.letter !== '😘BEIJO' && letter.letter !== '⚽️BOLA') || letter.highlighted);
   useEffect(()=>{
     if (allAsHighlighted ){
       axios.post('http://localhost:5000/achievement', {trofeuNumero:4})
     }
   },[allAsHighlighted])
-
-  const allAsHighlighted = letters.every((letter) => (letter.letter !== '👄BOCA' && letter.letter !== '😘BEIJO' && letter.letter !== '⚽️BOLA') || letter.highlighted);
-
   return (
     <div className='container-atividade'>       
     

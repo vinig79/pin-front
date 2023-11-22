@@ -1,26 +1,27 @@
 
-import { useAuth } from "../../context/Authenticate";
-import { useEffect } from "react";
+import { useState, useEffect } from 'react'
+import axios from 'axios'
 import styles from './Conta.scss'
 
 export default function Conta() {
-    const { logado, user } = useAuth();
-    console.log(logado)
-
+    const [user, setUser] = useState()
+    useEffect(()=>{
+        axios.get("ht")
+    })
+   
     return(
         <>
         
         <a className='SetaEsquerdaConta' href='/'> <i className="fas fa-arrow-left"></i> </a>
         
             <div class="Container-Conta">
-            {logado ? (
+            {? (
                 <div class="User-info">
                     <header className="HeaderConta">
                         <h2 className='H2Conta' style={{fontSize:"60px "}}>Dados da conta</h2>
                     </header>
                     <p style={{fontSize:"50px "}}><span class="label">Nome:</span> {user.name}</p>
                     <p style={{fontSize:"50px "}}><span class="label">Email:</span>{user.email}</p>
-                    <p style={{fontSize:"50px "}}><span class="label">Senha:</span> ********</p>
                 </div>
            
 
