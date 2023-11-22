@@ -25,10 +25,11 @@ export default function Recompensas() {
 
   return (
     <>
+		<a className='SetaEsquerda' href='/'> <i className="fas fa-arrow-left"></i> </a>
 		{ achievementsData &&  achievementsData.length < 6 ? (
 			
 			<>
-      <a className='SetaEsquerda' href='/'> <i className="fas fa-arrow-left"></i> </a>
+     
       <div className="flx1">
         <div className="flo">
           <div className="v">
