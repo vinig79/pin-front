@@ -17,11 +17,11 @@ const animal = {
 export default function Recompensas() {
 	const [achievementsData, setAchievementsData] = useState([])
   useEffect(() => {
-    axios.get("http://localhost:5000/achievement").then(res =>{ console.log(res.data); setAchievementsData(res.data)})
+    axios.get("http://localhost:5000/achievement").then(res =>{ console.log(res.data); setAchievementsData(res.data)}).catch(()=>{setAchievementsData([])})
   }, []);
-
+	console.log(achievementsData)
   // Lista de IDs dos achievements que você deseja renderizar
-  const idsParaRenderizar = achievementsData.map(item => item.achievements);
+  const idsParaRenderizar = achievementsData ? achievementsData.map(item => item.achievements): [];
 
   return (
     <>
