@@ -17,7 +17,7 @@ export default function MainSideBar(){
                         </a>
                         </li>
                         <li className="LiMainSide"><a className="ButtonSide" href="/Recompensas">
-                            <i className="fas fa-list"></i>
+                            <i className="fas fa-list" style={{color:'red'}}></i>
                             <span className="nav-item">Coleção</span>
                         </a>
                         </li>

@@ -19,10 +19,18 @@
     margin-left: 5%; 
     width: 90%;
     border-radius: 15px;
-    background: linear-gradient(to TOP, #9fcee8, #b1ecb1);
+    background: white;
     .SobreNos{
-        height: 100%;
-        width: 100%;
+        max-width: 90%;
+            max-height: 100%;
+            margin: 0 auto;
+            display: inline-block;
+        p {
+            display: inline-block;
+            text-indent: 3ch;
+            font-size: 20px;
+            margin: 0 auto;
+        }
     }
 }
 

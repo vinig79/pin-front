@@ -7,6 +7,7 @@ import { useEffect, useState } from "react";
 axios.defaults.withCredentials = true;
 export default function MainNavBar() {
 
+
   const navigate = useNavigate();
   const [logado, setLogado] = useState(false);
   useEffect(() => {

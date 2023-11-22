@@ -1,8 +1,15 @@
-import React, { useState } from 'react';
-
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
 import styles from './Atividade2.scss';
+
+axios.defaults.withCredentials = true;
+
+
+
 const Alfabeto = require('./Imagens/alfabeto.png');
 const Atividade2 = () => {
+
+    
     const [letters, setLetters] = useState([
         { letter: 'C', highlighted: false, resposta: true },
         { letter: 'T', highlighted: false },
@@ -36,12 +43,19 @@ const Atividade2 = () => {
         }
       };
       const allAsHighlighted2 = letters2.every((letter2) => (letter2.letter2 !== 'N') || letter2.highlighted);
+      useEffect(()=>{
+        if (allAsHighlighted && allAsHighlighted2){
+          axios.post('http://localhost:5000/achievement', {trofeuNumero:2})
+        }
+      },[allAsHighlighted, allAsHighlighted2])
+  
     
       return (
         <div className='container-atividade'>       
             <iframe className='VideoAula' src="https://www.youtube.com/embed/JTkid5jrMRQ?si=sOGOoQngNdS7GFnO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
             {/* <img style={{height:'30%', marginTop:'10px', backgroundColor:'#ffffff', borderRadius:'100px'}} src={Alfabeto} alt="" /> */}
+            {(allAsHighlighted && allAsHighlighted2) ? ( <div className='winnable2'></div>):(
 
             <div style={{display:'flex', flexDirection:'row', gridGap:'200px'}}>
               <div style={{alignItens:'center'}}>
@@ -100,7 +114,8 @@ const Atividade2 = () => {
                   
                 </div>          
               </div>
-              {(allAsHighlighted && allAsHighlighted2) && <div className='winnable2'></div>}
+            )}
+             
             </div>      
     );
 };
